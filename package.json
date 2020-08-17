@@ -1,0 +1,24 @@
+{
+  "name": "firebase-gettingtoknowtheservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klementj/firebase-gettingToKnowTheService.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klementj/firebase-gettingToKnowTheService/issues"
+  },
+  "homepage": "https://github.com/klementj/firebase-gettingToKnowTheService#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "firebase": "^7.17.2"
+  }
+}
