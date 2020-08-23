@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "parcel index.html",
+    "dev": "parcel src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +20,12 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "firebase": "^7.17.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^7.0.32",
+    "postcss-modules": "^3.2.1",
+    "tailwindcss": "^1.7.3"
   }
 }
