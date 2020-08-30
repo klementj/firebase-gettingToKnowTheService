@@ -1,7 +1,7 @@
 import "dotenv/config"
 import * as firebase from "firebase/app"
-import "firebase/firestore"
 import "firebase/auth"
+import "firebase/firestore"
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
@@ -102,3 +102,28 @@ function sendPasswordReset() {
 document.getElementById('sign-in').addEventListener('click', toggleSignIn, false)
 document.getElementById('sign-up').addEventListener('click', signUp, false)
 document.getElementById('resetPassword').addEventListener('click', sendPasswordReset, false)
+
+
+/**
+ * WORKOUTS
+ * 
+ * 1. functions
+ * 2. eventlistener
+ */
+
+function getWorkouts() {
+  const workouts = firebase.firestore().collection('workouts')
+
+  workouts
+    .get()
+    .then( querySnapshot => {
+        querySnapshot.forEach( doc => {
+            console.log(doc.id, " => ", doc.data())
+        });
+    })
+    .catch(function(error) {
+        console.log("Error getting documents: ", error)
+    });
+}
+
+document.getElementById('get-workouts').addEventListener('click', getWorkouts, false)
